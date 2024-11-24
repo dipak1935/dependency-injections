@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="myCar" class="com.engineeringDigest.vehicles.Car">
+
+<!--        <constructor-arg ref="myDiscountService"/>-->
+
+        <property name="discountService" ref="myDiscountService"/>
+        <property name="brandName" value="BMW"/>
+
+
+    </bean>
+
+    <bean id="myBus" class="com.engineeringDigest.vehicles.Bus">
+<!--        <constructor-arg ref="myDiscountService"/>-->
+
+        <property name="discountService" ref="myDiscountService"/>
+        <property name="brandName" value="Volvo"/>
+    </bean>
+
+
+    <bean id="myDiscountService" class="com.engineeringDigest.vehicles.FestivalDiscountServiceImpl">
+        
+
+    </bean>
+</beans>
